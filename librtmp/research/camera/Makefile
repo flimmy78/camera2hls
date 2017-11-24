@@ -1,4 +1,4 @@
 all:
-	g++ test.cpp -L. -lxmnetsdk ../../objs/lib/srs_librtmp.a -g -O0 -ldl -lstdc++ -o main
+	g++ test.cpp -L. -lxmnetsdk ../../objs/lib/srs_librtmp.a -g -O0 -ldl -lstdc++ -o main2hls
 clean:
-	rm main
+	rm -rf main2hls
