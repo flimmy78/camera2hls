@@ -47,7 +47,7 @@ int  RealDataCallBack_V2(long lRealHandle, const PACKET_INFO_EX *pFrame, long dw
                 return -1;
             }
         }
-        timestamp += 50;
+        timestamp += 100;
 	}
 	catch (...)
 	{
@@ -115,7 +115,7 @@ int  main(int argc, char* argv[])
 		H264_DVR_CLIENTINFO playstru;
 
 		playstru.nChannel = 0;
-		playstru.nStream = 0;
+		playstru.nStream = 1;
 		playstru.nMode = 0;
 		long m_iPlayhandle = H264_DVR_RealPlay(g_LoginID, &playstru);	
 		if(m_iPlayhandle == 0 )
@@ -128,7 +128,7 @@ int  main(int argc, char* argv[])
 			H264_DVR_SetRealDataCallBack_V2(m_iPlayhandle, RealDataCallBack_V2, 0);
 
 			printf("start RealPlay ok!");
-			sleep(300);
+			//sleep(300);
 			if(H264_DVR_StopRealPlay(m_iPlayhandle))
 			{
 				printf("stop realPlay ok\n");
