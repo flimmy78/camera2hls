@@ -41,7 +41,7 @@ HTTPReply::status_type HTTPRequestHandler::dispatch(std::string &peerAddress, co
     std::string callback;
     std::string inJson = contentJson;
     HTTPReply::status_type ret = HTTPReply::not_found;
-
+/*
     // 兼容GET带参数方式接口，提取出
     boost::regex re("(.*)\\?callback=(.*)&jsonStr=(.*)&(.*)");
     boost::cmatch matches;
@@ -65,9 +65,15 @@ HTTPReply::status_type HTTPRequestHandler::dispatch(std::string &peerAddress, co
             }
         }
     }
+    */
 
+    
+
+    apiName="/api/room/get.json";
+    inJson="{\"Sex\":1, \"LastRoomID\":\"1\"}";
+    outJson="{ \"Result\": \"YES\", \"Url\": \"http://106.14.62.202/live/test.m3u8\" }";
     LOG_T("API[" << apiName << "] ==> " << inJson);
-
+    return ret;
 	HandlerMap::iterator iter = m_handlers.find(apiName);
 	if (iter != m_handlers.end())
 	{
