@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\httpserver">
+      <UniqueIdentifier>{c65ae42e-0593-458f-8f56-a77bcdac7bd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\httpserver\bean">
+      <UniqueIdentifier>{0663d741-e426-4015-9f93-2755387a8dfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\httpserver\handler">
+      <UniqueIdentifier>{f914139b-1b8c-4bdb-a8ff-27fee1814d60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\httpserver\roommanager">
+      <UniqueIdentifier>{07e4e091-c74c-4722-9211-606543668e76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\httpserver">
+      <UniqueIdentifier>{0f49b29a-7ec5-4726-873e-57a9a70d999c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\httpserver\handler">
+      <UniqueIdentifier>{0788fdbd-fa13-4c57-8f5d-33ca455766d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\httpserver\roommanager">
+      <UniqueIdentifier>{5cb0267d-8f2d-4c06-8ac1-ecd1a304c7a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\kugou\HTTPProxy\httpserver\bean\APIDefine.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\HTTPProxy\httpserver\bean\OrderSongsRequest.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\HTTPProxy\httpserver\bean\OrderSongsResponse.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\bean\RoomConcealRequest.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\bean\RoomConcealResponse.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\bean\RoomGetRequest.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\bean\RoomGetResponse.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\bean\RoomPublicRequest.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\bean\RoomPublicResponse.h">
+      <Filter>头文件\httpserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\HTTPProxy\httpserver\handler\OrderSongs.h">
+      <Filter>头文件\httpserver\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\handler\RoomConceal.h">
+      <Filter>头文件\httpserver\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\handler\RoomGet.h">
+      <Filter>头文件\httpserver\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\handler\RoomPublic.h">
+      <Filter>头文件\httpserver\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\roommanager\RoomInfo.h">
+      <Filter>头文件\httpserver\roommanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\roommanager\RoomManager.h">
+      <Filter>头文件\httpserver\roommanager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\httpserver\roommanager\SystemConfig.h">
+      <Filter>头文件\httpserver\roommanager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\kugou\HTTPProxy\httpserver\handler\OrderSongs.cpp">
+      <Filter>源文件\httpserver\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\httpserver\handler\RoomConceal.cpp">
+      <Filter>源文件\httpserver\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\httpserver\handler\RoomGet.cpp">
+      <Filter>源文件\httpserver\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\httpserver\handler\RoomPublic.cpp">
+      <Filter>源文件\httpserver\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\httpserver\roommanager\RoomInfo.cpp">
+      <Filter>源文件\httpserver\roommanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\httpserver\roommanager\RoomManager.cpp">
+      <Filter>源文件\httpserver\roommanager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\httpserver\roommanager\SystemConfig.cpp">
+      <Filter>源文件\httpserver\roommanager</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

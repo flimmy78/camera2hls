@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\tokenserver">
+      <UniqueIdentifier>{02209646-7a58-4323-ab4c-b4ba00dff554}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\tokenserver">
+      <UniqueIdentifier>{ebc95252-9e6f-4f5e-a0a5-9f2d4ceb9bc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tokenserver\bean">
+      <UniqueIdentifier>{4a8e4cbf-b069-4440-bfbc-f2b8d94c99a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\tokenserver\handler">
+      <UniqueIdentifier>{9414af02-e202-42c7-b6aa-6a59963ee2cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\tokenserver\handler">
+      <UniqueIdentifier>{a77cc884-757e-4e30-a738-22be6d4b5661}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\tokenserver\bean\APIDefine.h">
+      <Filter>头文件\tokenserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\tokenserver\bean\CheckTokenRequest.h">
+      <Filter>头文件\tokenserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\tokenserver\bean\CheckTokenResponse.h">
+      <Filter>头文件\tokenserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\tokenserver\bean\CreateTokenRequest.h">
+      <Filter>头文件\tokenserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\tokenserver\bean\CreateTokenResponse.h">
+      <Filter>头文件\tokenserver\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\tokenserver\handler\CheckToken.h">
+      <Filter>头文件\tokenserver\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\tokenserver\handler\CreateToken.h">
+      <Filter>头文件\tokenserver\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\tokenserver\SystemConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\tokenserver\handler\CheckToken.cpp">
+      <Filter>源文件\tokenserver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\tokenserver\handler\CreateToken.cpp">
+      <Filter>源文件\tokenserver\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\tokenserver\SystemConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

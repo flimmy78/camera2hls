@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\core\AccessPointManager.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\core\RadixTree.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\core\StrategyManager.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\core\StreamServerManager.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\handler\GetAddressList.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\handler\GetTestNodeList.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\handler\IPSearch.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\handler\JustReportTestResult.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\handler\ReportTestResult.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\handler\UpdateDatabase.cpp" />
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\accessserver\system\AccessServerConfig.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\AllowRoomStrategy.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\Encoding.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\JustReportTestResultRequest.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\JustReportTestResultResponse.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\RelayRoomStrategy.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\APIDefine.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\GetAddressListRequest.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\GetAddressListResponse.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\GetTestNodeListRequest.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\GetTestNodeListResponse.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\IPSearchRequest.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\IPSearchResponse.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\ReportTestResultRequest.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\ReportTestResultResponse.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\UpdateDatabaseRequest.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\UpdateDatabaseResponse.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\bean\WhiteRoomListStrategy.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\core\AccessPointManager.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\core\RadixTree.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\core\StrategyManager.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\core\StreamServerManager.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\handler\GetAddressList.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\handler\GetTestNodeList.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\handler\IPSearch.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\handler\JustReportTestResult.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\handler\ReportTestResult.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\handler\UpdateDatabase.h" />
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\accessserver\system\AccessServerConfig.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{024B2332-5EE7-4F51-90EA-43F04ADBB073}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AccessServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\..\..\..\bin\window\AccessServer</OutDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\..\..\..\src;F:\3rd-party\libevent-2.0.21-stable\include;F:\opensource\boost_1_54_0\;F:\3rd-party\log4cxx\include;F:\3rd-party\json-c-0.9\include;F:\3rd-party\poco-1.4.6p2-all\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

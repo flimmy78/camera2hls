@@ -1,0 +1,62 @@
+cmake_minimum_required(VERSION 2.6)
+PROJECT(liveencoder)
+
+ADD_DEFINITIONS(-DDEBUG)
+SET(SRC_PATH ./../../../src)
+SET(EXECUTABLE_OUTPUT_PATH ../../../bin/linux/Liveencoder/bin)
+
+INCLUDE_DIRECTORIES(${SRC_PATH})
+INCLUDE_DIRECTORIES(/home/3rd-party/libevent-2.0.21/include)
+INCLUDE_DIRECTORIES(/home/3rd-party/boost/include)
+INCLUDE_DIRECTORIES(/home/3rd-party/log4cxx/include)
+INCLUDE_DIRECTORIES(/home/3rd-party/json-c-0.9/include)
+INCLUDE_DIRECTORIES(/home/3rd-party/poco/include)
+
+LINK_DIRECTORIES(/home/3rd-party/poco/lib)
+LINK_DIRECTORIES(/home/3rd-party/boost/lib)
+LINK_DIRECTORIES(/home/3rd-party/log4cxx/lib)
+LINK_DIRECTORIES(/home/3rd-party/libevent-2.0.21/lib)
+LINK_DIRECTORIES(/home/3rd-party/json-c-0.9/lib)
+LINK_DIRECTORIES(/home/3rd-party/cryptopp/lib)
+
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/facility/Exception.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/facility/ErrorMsg.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/facility/Json.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/facility/Demangle.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/facility/log.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/facility/SysHealth.cpp)
+
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/net/HTTPClient.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/net/HTTPServer.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/net/StreamSocket.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/net/HTTPConnection.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/net/HTTPConnectionManager.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/net/HTTPReply.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/base/net/HTTPRequestHandler.cpp)
+
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/handler/AddEncodeChannel.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/handler/AddEncodeChannelSuccess.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/handler/DelEncodeChannel.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/handler/RegisterEncoder.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/handler/EncoderHeartbeat.cpp)
+
+
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/encoder/EncoderWorker.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/encoder/EncoderLibrary.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/encoder/Heartbeat.cpp)
+
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/scheduleencoder/ScheduleEncoderLibrary.cpp)
+
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/SystemConfig.cpp)
+SET(SRC_FILE ${SRC_FILE} ${SRC_PATH}/kugou/httpproxy/liveencoder/main.cpp)
+
+ADD_EXECUTABLE(liveencoder ${SRC_FILE})
+add_definitions(-DBOOST_LOG_DYN_LINK)
+TARGET_LINK_LIBRARIES(liveencoder boost_system)
+TARGET_LINK_LIBRARIES(liveencoder boost_filesystem)
+TARGET_LINK_LIBRARIES(liveencoder boost_thread)
+TARGET_LINK_LIBRARIES(liveencoder boost_program_options)
+TARGET_LINK_LIBRARIES(liveencoder PocoFoundation)
+TARGET_LINK_LIBRARIES(liveencoder log4cxx)
+TARGET_LINK_LIBRARIES(liveencoder json)
+TARGET_LINK_LIBRARIES(liveencoder event)

@@ -1,0 +1,33 @@
+# Set root logger level to DEBUG and its only appender to A1. 
+log4j.rootLogger=TRACE, A3
+# A1 is set to be a ConsoleAppender. 
+log4j.appender.A1=org.apache.log4j.ConsoleAppender
+#log4j.appender.A1=ConsoleAppender
+# A1 uses PatternLayout. 
+log4j.appender.A1.layout=log4j.PatternLayout
+log4j.appender.A1.layout.ConversionPattern=[%-8r][%-30d][%-8t][%-5p][%-3c]  %-150m        %l%n
+
+# A2 is set to be a FileAppender.
+log4j.appender.A2=log4cxx.FileAppender
+log4j.appender.A2.File=log/accessServer.log
+log4j.appender.A2.Append=true
+log4j.appender.A2.layout=log4j.PatternLayout
+log4j.appender.A2.layout.ConversionPattern=[%-8r][%-30d][%-8t][%-5p][%-3c]  %-150m        %l%n
+log4j.appender.A2.layout.TimeZone=GMT-8:00
+
+# A3 is set to be a DailyRollingFileAppender.
+log4j.appender.A3=log4cxx.DailyRollingFileAppender
+log4j.appender.A3.File=log/accessServer.log
+log4j.appender.A3.DatePattern=.%Y-%m-%d
+log4j.appender.A3.layout=log4j.PatternLayout
+log4j.appender.A3.Append=true
+log4j.appender.A3.layout.ConversionPattern=[%-8r][%-25d][%-8t][%-5p][%-3c]  %-150m        %n
+
+# A4 is set to be a RollingFileAppender.
+log4j.appender.A4=org.apache.log4j.RollingFileAppender
+log4j.appender.A4.File=log/accessServer.log
+log4j.appender.A4.MaxFileSize=5000KB
+# Keep one backup file
+log4j.appender.A4.MaxBackupIndex=1
+log4j.appender.A4.layout=org.apache.log4j.PatternLayout
+log4j.appender.A4.layout.ConversionPattern=[%-8r][%-30d][%-8t][%-5p][%-3c]  %-150m        %l%n

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\bean">
+      <UniqueIdentifier>{bea99790-1af3-43a8-8353-98d41ec452ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\encoder">
+      <UniqueIdentifier>{76383358-cd4a-409e-920a-074a51532cf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\handler">
+      <UniqueIdentifier>{bccc1c8b-66a0-4d9a-bf3c-f293db5a1167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\scheduleencoder">
+      <UniqueIdentifier>{45783cb2-7646-4afd-876d-7ed5f844f66c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{06ebd3f2-ac38-4acf-ae4b-fe5b59a161c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\encoder">
+      <UniqueIdentifier>{428d5209-31ea-4cf2-9656-b1cc4b1dac15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\handler">
+      <UniqueIdentifier>{204b2f28-1034-40e0-ab1a-214865e2abf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\scheduleencoder">
+      <UniqueIdentifier>{86bb917d-f5bc-4885-a499-9c00dff39054}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\AddEncodeChannelRequest.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\AddEncodeChannelResponse.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\APIDefine.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\DelEncodeChannelRequest.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\DelEncodeChannelResponse.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\EncoderHeartbeatRequest.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\EncoderHeartbeatResponse.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\RegisterEncoderRequest.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\bean\RegisterEncoderResponse.h">
+      <Filter>头文件\bean</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\AddEncodeChannel.h">
+      <Filter>头文件\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\AddEncodeChannelSuccess.h">
+      <Filter>头文件\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\DelEncodeChannel.h">
+      <Filter>头文件\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\EncoderHeartbeat.h">
+      <Filter>头文件\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\RegisterEncoder.h">
+      <Filter>头文件\handler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\encoder\EncoderLibrary.h">
+      <Filter>头文件\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\encoder\EncoderWorker.h">
+      <Filter>头文件\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\encoder\Heartbeat.h">
+      <Filter>头文件\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\encoder\LibraryImpl.h">
+      <Filter>头文件\encoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\scheduleencoder\ScheduleEncoderLibrary.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\kugou\httpproxy\liveencoder\SystemConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\encoder\EncoderLibrary.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\encoder\EncoderWorker.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\encoder\Heartbeat.cpp">
+      <Filter>源文件\encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\SystemConfig.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\AddEncodeChannel.cpp">
+      <Filter>源文件\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\AddEncodeChannelSuccess.cpp">
+      <Filter>源文件\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\DelEncodeChannel.cpp">
+      <Filter>源文件\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\EncoderHeartbeat.cpp">
+      <Filter>源文件\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\handler\RegisterEncoder.cpp">
+      <Filter>源文件\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\scheduleencoder\ScheduleEncoderLibrary.cpp">
+      <Filter>源文件\scheduleencoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\kugou\httpproxy\liveencoder\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
