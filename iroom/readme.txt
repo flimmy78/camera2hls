@@ -22,7 +22,8 @@ ln -s /usr/local/bin/pip2.7 /usr/bin/pip
 pip install Flask
 
 
-
+#install gunicorn
+pip install gunicorn
 
 
 

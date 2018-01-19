@@ -8,7 +8,7 @@
 srs_rtmp_t rtmp;
 long g_LoginID=0;
 int timestamp=0;
-FILE * g_pFile;
+//FILE * g_pFile;
 
 int  RealDataCallBack_V2(long lRealHandle, const PACKET_INFO_EX *pFrame, long dwUser)
 {
@@ -32,7 +32,7 @@ int  RealDataCallBack_V2(long lRealHandle, const PACKET_INFO_EX *pFrame, long dw
             skipByte = 16;
         }
         
-		fwrite(pFrame->pPacketBuffer + skipByte ,1,pFrame->dwPacketSize - skipByte,g_pFile);
+//		fwrite(pFrame->pPacketBuffer + skipByte ,1,pFrame->dwPacketSize - skipByte,g_pFile);
         
         int ret = srs_h264_write_raw_frames(rtmp, pFrame->pPacketBuffer + skipByte, pFrame->dwPacketSize - skipByte, timestamp, timestamp);
         if (ret != 0) {
@@ -124,7 +124,7 @@ int  main(int argc, char* argv[])
 		}
 		else
 		{
-			g_pFile = fopen("TestRealPlay.h264", "wb+");
+			//g_pFile = fopen("TestRealPlay.h264", "wb+");
 			H264_DVR_SetRealDataCallBack_V2(m_iPlayhandle, RealDataCallBack_V2, 0);
 
 			printf("start RealPlay ok!");
@@ -155,10 +155,10 @@ int  main(int argc, char* argv[])
     // clenn rtmp
     srs_rtmp_destroy(rtmp);
 
-	if(g_pFile)
-	{
-		fclose(g_pFile);
-	}
+	//if(g_pFile)
+	//{
+	//	fclose(g_pFile);
+	//}
 	printf("**************OVER************\n");
 	return 0;
 }
