@@ -47,7 +47,7 @@ int  RealDataCallBack_V2(long lRealHandle, const PACKET_INFO_EX *pFrame, long dw
                 return -1;
             }
         }
-        timestamp += 100;
+        timestamp += 40; // 25fps
 	}
 	catch (...)
 	{
@@ -128,7 +128,7 @@ int  main(int argc, char* argv[])
 			H264_DVR_SetRealDataCallBack_V2(m_iPlayhandle, RealDataCallBack_V2, 0);
 
 			printf("start RealPlay ok!");
-			//sleep(300);
+			sleep(86400);
 			if(H264_DVR_StopRealPlay(m_iPlayhandle))
 			{
 				printf("stop realPlay ok\n");
