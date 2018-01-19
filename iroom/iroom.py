@@ -26,8 +26,10 @@ def getlivestreamHandler():
 def getvodstreamHandler():
     if platform.system() == "Linux":
         #find the input H.264 file
-        #os.path.exists(request.args.get("filepath"))
-        os.system('./vod.py ' + os.path.basename(request.args.get("filepath")))
+        if os.path.exists(request.args.get("filepath")):
+        	os.system('./vod.py ' + request.args.get("filepath") + ' '+os.path.basename(request.args.get("filepath")))
+	else:
+		print "Can not find : " + request.args.get("filepath")
     else:
         print request.args
     return "{\"Url\":\"http://106.14.62.202/live/" + os.path.basename(request.args.get("filepath")) + ".m3u8\"}"
