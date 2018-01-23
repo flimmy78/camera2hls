@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/api/stoplivestream', methods=["GET", 'POST'])
 def stoplivestreamHandler():
     if platform.system() == "Linux":
-        os.system('./stop.py ' + request.args.get("cameraip"))
+        os.system('./stop.py ' + request.args.get("ip") + ' ' +  request.args.get("port") + ' ' + request.args.get("name") + ' &')
     else:
         print request.args
     return "OK"
@@ -16,11 +16,10 @@ def stoplivestreamHandler():
 @app.route('/api/getlivestream', methods=["GET", 'POST'])
 def getlivestreamHandler():
     if platform.system() == "Linux":
-        os.system('./start.py ' + request.args.get("cameraip") + ' ' + request.args.get("cameraport") + ' ' + request.args.get(
-            "username") + ' ' + request.args.get("livelimit") + ' &')
+        os.system('./start.py ' + request.args.get("ip") + ' ' + request.args.get("port") + ' ' + request.args.get( "name") + ' ' + request.args.get("livelimit") + ' &')
     else:
         print request.args
-    return "{\"Url\":\"http://106.14.62.202/live/" + request.args.get("cameraip") + ".m3u8\"}"
+    return "{\"Url\":\"http://106.14.62.202/live/" + request.args.get("ip") + "_" +  request.args.get("port") + "_" + request.args.get("name") + ".m3u8\"}"
 
 @app.route('/api/getvodstream', methods=["GET", 'POST'])
 def getvodstreamHandler():

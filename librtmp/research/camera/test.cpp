@@ -12,9 +12,8 @@ int timestamp=0;
 
 int  RealDataCallBack_V2(long lRealHandle, const PACKET_INFO_EX *pFrame, long dwUser)
 {
-    /*
-    printf("frame type : %d\n",pFrame->nPacketType);
-    printf("dwPacketSize: %d\n",pFrame->dwPacketSize);    
+    //printf("frame type : %d\n",pFrame->nPacketType);
+    /*printf("dwPacketSize: %d\n",pFrame->dwPacketSize);    
 	printf("time:%04d-%02d-%02d %02d:%02d:%02d\n",pFrame->nYear,pFrame->nMonth,pFrame->nDay,pFrame->nHour,pFrame->nMinute,pFrame->nSecond);
     printf("dwTimeStamp: %d\n",pFrame->dwTimeStamp);
     printf("dwTimeStampHigh: %d\n",pFrame->dwTimeStampHigh);
@@ -24,12 +23,12 @@ int  RealDataCallBack_V2(long lRealHandle, const PACKET_INFO_EX *pFrame, long dw
     printf("uHeight: %d\n",pFrame->uHeight); 
     */
     printf("time:%04d-%02d-%02d %02d:%02d:%02d\n",pFrame->nYear,pFrame->nMonth,pFrame->nDay,pFrame->nHour,pFrame->nMinute,pFrame->nSecond);
-    
-	BOOL bResult = TRUE;
+    BOOL bResult = TRUE;
+    if(pFrame->nPacketType > 0 && pFrame->nPacketType < 6){ // video 
 	try{
-        int skipByte = 8;
-        if( pFrame->nPacketType == 1){
-            skipByte = 16;
+        	int skipByte = 8;
+        	if( pFrame->nPacketType == 1){
+            	skipByte = 16;
         }
         
 //		fwrite(pFrame->pPacketBuffer + skipByte ,1,pFrame->dwPacketSize - skipByte,g_pFile);
@@ -52,7 +51,7 @@ int  RealDataCallBack_V2(long lRealHandle, const PACKET_INFO_EX *pFrame, long dw
 	catch (...)
 	{
 	}
-
+    }
 	// it must return TRUE if decode successfully,or the SDK will consider the decode is failed
 	return bResult;
 }

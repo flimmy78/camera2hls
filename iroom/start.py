@@ -14,8 +14,8 @@ print ip
 print port
 print user
 print ttl
-cmd='ps -ef|grep '+sys.argv[1]+'|grep -v grep|grep -v start.py'
-cmd2='./camera2hls '+ip+' '+port+' '+user+' rtmp://127.0.0.1/live/'+ip
+cmd='ps -ef|grep '+ip+'|grep '+port+'|grep '+user+'|grep -v grep|grep -v start.py'
+cmd2='./camera2hls '+ip+' '+port+' '+user+' rtmp://127.0.0.1/live/'+ip+'_'+port+'_'+user+'>'+user+'.log &'
 print cmd2
 res1 = subprocess.Popen(cmd,stdout=subprocess.PIPE,shell=True)
 attn1=res1.stdout.readlines()
@@ -31,4 +31,4 @@ while ttl > 0:
                 subprocess.Popen(cmd2,stdout=subprocess.PIPE,shell=True)
         ttl= ttl-1
         time.sleep(1)
-os.system('ps aux|grep '+ip+'|grep -v grep|grep -v start.py|awk \'{print $2}\'|xargs kill -9')
+os.system('ps aux|grep '+ip+'|grep '+port+'|grep '+user+'|grep -v grep|grep -v start.py|awk \'{print $2}\'|xargs kill -9')
