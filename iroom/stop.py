@@ -4,7 +4,8 @@ import time
 import subprocess
 import sys
 
-#print sys.argv[1]
 
 ip=sys.argv[1]
-os.system('ps aux|grep '+ip+'|grep -v grep|awk \'{print $2}\'|xargs kill -9')
+port=sys.argv[2]
+user=sys.argv[3]
+os.system('ps aux|grep '+ip+'|grep '+port+'|grep '+user+'|grep -v grep|awk \'{print $2}\'|xargs kill -9')
