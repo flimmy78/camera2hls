@@ -10,10 +10,10 @@ ip=sys.argv[1]
 port=sys.argv[2]
 user=sys.argv[3]
 ttl=int(sys.argv[4])
-print ip
-print port
-print user
-print ttl
+#print ip
+#print port
+#print user
+#print ttl
 cmd='ps -ef|grep '+ip+'|grep '+port+'|grep '+user+'|grep -v grep|grep -v start.py'
 cmd2='./camera2hls '+ip+' '+port+' '+user+' rtmp://127.0.0.1/live/'+ip+'_'+port+'_'+user+'>'+user+'.log &'
 print cmd2
@@ -27,7 +27,7 @@ while ttl > 0:
         attn=res.stdout.readlines()
         counts=len(attn)
         if counts < 1:
-                print  "start ffmpeg"
+                print  "get cam error,try again"
                 subprocess.Popen(cmd2,stdout=subprocess.PIPE,shell=True)
         ttl= ttl-1
         time.sleep(1)
