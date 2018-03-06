@@ -1,9 +1,24 @@
 #!/usr/bin/env python
 import os
+import time
+import re
 import hashlib
 from flask import Flask
 from flask import request
 import platform
+
+def checkIsGetLiveStream(name):
+        try:
+                with open(name, 'r') as f:
+                        lines = f.readlines()
+                        f.close()
+                        for line in lines:
+                                if re.search('time',line):
+                                        return 1
+        except IOError:
+                return -1
+        return -1
+
 app = Flask(__name__)
 
 @app.route('/api/stoplivestream', methods=["GET", 'POST'])
@@ -20,7 +35,20 @@ def getlivestreamHandler():
         os.system('./start.py ' + request.args.get("ip") + ' ' + request.args.get("port") + ' ' + request.args.get( "name") + ' ' + request.args.get("livelimit") + ' &')
     else:
         print request.args
-    return "{\"Url\":\"http://106.14.62.202/live/" + request.args.get("ip") + "_" +  request.args.get("port") + "_" + request.args.get("name") + ".m3u8\"}"
+    time.sleep(1)
+    counts=25
+    ret="NO"
+    while counts>0:
+        rets = checkIsGetLiveStream(request.args.get( "name") + '.log')
+        if rets > 0:
+            ret="YES"
+            break
+        else:
+            ret="NO"
+        counts = counts - 1
+        time.sleep(0.2)
+    # TODO
+    return "{\"Url\":\"http://106.14.62.202/live/" + request.args.get("ip") + "_" +  request.args.get("port") + "_" + request.args.get("name") + ".m3u8\",\"Ret\":\"" + ret + "\"}"
 
 @app.route('/api/getvodstream', methods=["GET", 'POST'])
 def getvodstreamHandler():
