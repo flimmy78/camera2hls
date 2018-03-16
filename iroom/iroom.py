@@ -55,15 +55,17 @@ def getvodstreamHandler():
     if platform.system() == "Linux":
         #find the input H.264 file
 	#outputfile = hashlib.md5(os.path.basename(request.args.get("filepath")))
-	outputfile = hashlib.md5(request.args.get("filepath"))
+	#outputfile = hashlib.md5(request.args.get("filepath"))
 	#print outputfile.hexdigest()
         if os.path.exists(request.args.get("filepath")):
-        	os.system('./vod.sh ' + request.args.get("filepath") + ' '+outputfile.hexdigest())
+        	#os.system('./vod.sh ' + request.args.get("filepath") + ' '+outputfile.hexdigest())
+        	os.system('./vod.sh ' + request.args.get("filepath") + ' '+os.path.basename(request.args.get("filepath")))
 	else:
 		print "Can not find : " + request.args.get("filepath")
     else:
         print request.args
-    return "{\"Url\":\"http://106.14.62.202/live/" + outputfile.hexdigest() + ".m3u8\"}"
+    #return "{\"Url\":\"http://106.14.62.202/live/" + outputfile.hexdigest() + ".m3u8\"}"
+    return "{\"Url\":\"http://106.14.62.202/live/" + os.path.basename(request.args.get("filepath")) + ".m3u8\"}"
 
 @app.route('/')
 def hello_world():
